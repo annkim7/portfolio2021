@@ -1,7 +1,6 @@
 $(function(){
 
-    var btn = $('.pop-btn');
-    var close = $('.close-btn');
+    
 
     // var array = [
     //     {"title":"Its game", "contents": "테스트1"},
@@ -12,9 +11,11 @@ $(function(){
     //     {"title":"Inquebangkok", "contents": "테스트6"},
     // ];
 
-
+    var btn = $('.pop-btn');
+    var close = $('.close-btn');
     $('.popup').hide();
-
+    
+    
     btn.click(function(){
         var list = $(this).parents('li');
         var popClass = $(this).parents('li').attr('class');
@@ -51,10 +52,10 @@ $(function(){
     });
 
 
-    close.click(function(){
-        //$('.popup').fadeOut();
+    $('.close-btn').click(function(){
+        $('.popup').fadeOut();
+        $('.popup').remove();
         $('.ball').removeClass('on');
-        $('.popup').detach();
     });
 
 });
