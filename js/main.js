@@ -3,14 +3,14 @@ $(function(){
     var btn = $('.pop-btn');
     var close = $('.close-btn');
 
-    var array = [
-        {"title":"Its game", "contents": "테스트1"},
-        {"title":"STF 2021", "contents": "테스트2"},
-        {"title":"IKW 2021", "contents": "테스트3"},
-        {"title":"Jipremium x 4", "contents": "테스트4"},
-        {"title":"Eco", "contents": "테스트5"},
-        {"title":"Inquebangkok", "contents": "테스트6"},
-    ];
+    // var array = [
+    //     {"title":"Its game", "contents": "테스트1"},
+    //     {"title":"STF 2021", "contents": "테스트2"},
+    //     {"title":"IKW 2021", "contents": "테스트3"},
+    //     {"title":"Jipremium x 4", "contents": "테스트4"},
+    //     {"title":"Eco", "contents": "테스트5"},
+    //     {"title":"Inquebangkok", "contents": "테스트6"},
+    // ];
 
     
     
@@ -42,8 +42,7 @@ $(function(){
                 '</div>';
             
             $('.container').append(dataHTML);
-            
-               
+           
         
         }); 
 
@@ -59,7 +58,7 @@ $(function(){
         $('.popup').fadeOut();
         $('.ball').removeClass('on');
         
-        $('.container').remove(itemHTML);
+        $('.popup').remove();
     });
 
 });
