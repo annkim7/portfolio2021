@@ -13,17 +13,17 @@ $(function(){
     ];
 
     $.getJSON('data/data.json', function(data){
-        var itemHTML = 
+        var dataHTML = 
         '<div class="popup">' +
             '<a class="close-btn"></a>' +
             '<div class="pop-con">' +
                 '<div class="pop-box">' +
-                    '<div class="title">' + item. title + '</div>' +
-                    '<div class="text">' + item.contents + '</div>' +
+                    '<div class="title">' + data.title + '</div>' +
+                    '<div class="text">' + data.contents + '</div>' +
                 '</div>' +
             '</div>' +
         '</div>';
-        $('.container').append(elements);
+        $('.container').append(dataHTML);
            
     
         }); 
