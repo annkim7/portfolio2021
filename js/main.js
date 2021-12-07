@@ -40,11 +40,6 @@ $(function(){
     });
 
 
-    $('.close-btn').click(function(){
-       
-        $('.popup').fadeOut();
-        $('.popup').detach();
-        $('.ball').removeClass('on');
-    });
+    
 
 });

@@ -85,6 +85,12 @@
 
         $('.mainSlide').selfSlide();
 
+        $('.close-btn').click(function(){
+       
+            $('.popup').fadeOut();
+            $('.popup').detach();
+            $('.ball').removeClass('on');
+        });
     </script>
 </body>
 </html>
