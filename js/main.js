@@ -27,7 +27,7 @@ $(function(){
                     '</div>' +
                 '</div>';
             
-            $('.container').append(dataHTML).delay(500).fadeIn(1000);
+            $('.container').append(dataHTML).delay(1000).fadeIn(1000);
            
         });
         $('.ball').addClass('on');
