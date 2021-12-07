@@ -12,7 +12,7 @@ $(function(){
         {"title":"Inquebangkok", "contents": "테스트6"},
     ];
 
-    $.getJSON('data/data.json', function(data){
+    $.getJSON('./data/data.json', function(data){
         var dataHTML = 
         '<div class="popup">' +
             '<a class="close-btn"></a>' +
