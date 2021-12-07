@@ -12,30 +12,29 @@ $(function(){
         {"title":"Inquebangkok", "contents": "테스트6"},
     ];
 
-    $.getJSON('data/data.json', function(data){
-        //
-        var elements = [];
+    // $.getJSON('data/data.json', function(data){
+    //     var elements = [];
 
-        $.each(data, function(i, item){
+    //     $.each(data, function(i, item){
 
-            var itemHTML = 
-                '<div class="popup">' +
-                    '<a class="close-btn"></a>' +
-                    '<div class="pop-con">' +
-                        '<div class="pop-box">' +
-                            '<div class="title">' + item. title + '</div>' +
-                            '<div class="text">' + item.contents + '</div>' +
-                        '</div>' +
-                    '</div>' +
-                '</div>'
-                ;
+    //         var itemHTML = 
+    //             '<div class="popup">' +
+    //                 '<a class="close-btn"></a>' +
+    //                 '<div class="pop-con">' +
+    //                     '<div class="pop-box">' +
+    //                         '<div class="title">' + item. title + '</div>' +
+    //                         '<div class="text">' + item.contents + '</div>' +
+    //                     '</div>' +
+    //                 '</div>' +
+    //             '</div>'
+    //             ;
 
-            elements.push($(itemHTML).get(0));
-        });// each
+    //         elements.push($(itemHTML).get(0));
+    //     });
 
-        $('.container').append(elements);
+    //     $('.container').append(elements);
 
-    }); //getJSON
+    // }); 
 
     $('.popup').hide();
 
