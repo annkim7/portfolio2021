@@ -12,8 +12,6 @@ $(function(){
     //     {"title":"Inquebangkok", "contents": "테스트6"},
     // ];
 
-    
-    
 
     $('.popup').hide();
 
@@ -42,23 +40,21 @@ $(function(){
                 '</div>';
             
             $('.container').append(dataHTML);
-           
         
         }); 
 
         $('.popup').fadeIn();
         $('.ball').addClass('on');
 
-        $('.pop-con').find('.title').text(array[popIdx].title);
-        $('.pop-con').find('.text').text(array[popIdx].contents);
+        //$('.pop-con').find('.title').text(array[popIdx].title);
+        //$('.pop-con').find('.text').text(array[popIdx].contents);
     });
 
 
     close.click(function(){
-        $('.popup').fadeOut();
+        //$('.popup').fadeOut();
         $('.ball').removeClass('on');
-        
-        $('.popup').remove();
+        $('.popup').detach();
     });
 
 });
