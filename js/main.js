@@ -1,7 +1,5 @@
 $(function(){
 
-    
-
     var btn = $('.pop-btn');
     var close = $('.close-btn');
     
@@ -33,22 +31,13 @@ $(function(){
         
         }); 
 
-        $('.popup').fadeIn();
         $('.ball').addClass('on');
 
-        
     });
 
-    $('.close-btn').click(function(){
-        console.log('click!!!');
-        $('.popup').fadeOut();
-        $(this).parent().remove();
-        $('.ball').removeClass('on');
-    });
-    
     
     $(document).on("click", '.close-btn', function(){
-        $('.popup').fadeOut();
+
         $(this).parent().remove();
         $('.ball').removeClass('on');
     });
