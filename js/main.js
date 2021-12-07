@@ -5,13 +5,6 @@ $(function(){
     var btn = $('.pop-btn');
     var close = $('.close-btn');
     
-    close.click(function(){
-       
-        $('.popup').fadeOut();
-        $('.popup').detach();
-        $('.ball').removeClass('on');
-    });
-    
     btn.click(function(){
         var list = $(this).parents('li');
         var popClass = $(this).parents('li').attr('class');
@@ -42,9 +35,18 @@ $(function(){
 
         $('.popup').fadeIn();
         $('.ball').addClass('on');
+
+        close.click(function(){
+       
+            $('.popup').fadeOut();
+            $('.popup').detach();
+            $('.ball').removeClass('on');
+        });
     });
 
 
+    
+    
     
 
 });
