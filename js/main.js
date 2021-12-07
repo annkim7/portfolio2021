@@ -39,8 +39,8 @@ $(function(){
         // $(this).parent().fadeTo(1000, 0.2);
         // $(this).parent().remove();
 
-        $(this).parent().fadeOut("1000", function(){
-            $(this).parent().remove();
+        $(this).parent('.popup').fadeOut("1000", function(){
+            $(this).remove();
         });
 
         $('.ball').removeClass('on');
