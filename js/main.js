@@ -2,18 +2,9 @@ $(function(){
 
     
 
-    // var array = [
-    //     {"title":"Its game", "contents": "테스트1"},
-    //     {"title":"STF 2021", "contents": "테스트2"},
-    //     {"title":"IKW 2021", "contents": "테스트3"},
-    //     {"title":"Jipremium x 4", "contents": "테스트4"},
-    //     {"title":"Eco", "contents": "테스트5"},
-    //     {"title":"Inquebangkok", "contents": "테스트6"},
-    // ];
-
     var btn = $('.pop-btn');
     var close = $('.close-btn');
-    $('.popup').hide();
+    // $('.popup').hide();
     
     
     btn.click(function(){
@@ -46,15 +37,13 @@ $(function(){
 
         $('.popup').fadeIn();
         $('.ball').addClass('on');
-
-        //$('.pop-con').find('.title').text(array[popIdx].title);
-        //$('.pop-con').find('.text').text(array[popIdx].contents);
     });
 
 
     $('.close-btn').click(function(){
+       
         $('.popup').fadeOut();
-        $('.popup').remove();
+        $('.popup').detach();
         $('.ball').removeClass('on');
     });
 
