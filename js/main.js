@@ -27,18 +27,22 @@ $(function(){
                     '</div>' +
                 '</div>';
             
-            $('.container').append(dataHTML).fadeIn();
+            $('.container').append(dataHTML).fadeIn(1000);
         
-        }); 
-
+        });
         $('.ball').addClass('on');
 
     });
 
     
     $(document).on("click", '.close-btn', function(){
-        $(this).parent().fadeOut();
-        $(this).parent().remove();
+        // $(this).parent().fadeTo(1000, 0.2);
+        // $(this).parent().remove();
+
+        $(this).parent().fadeOut("1000", function(){
+            $(this).parent().remove();
+        });
+
         $('.ball').removeClass('on');
     });
 
