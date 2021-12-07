@@ -12,6 +12,23 @@ $(function(){
         {"title":"Inquebangkok", "contents": "테스트6"},
     ];
 
+    $.getJSON('data/data.json', function(data){
+        var itemHTML = 
+        '<div class="popup">' +
+            '<a class="close-btn"></a>' +
+            '<div class="pop-con">' +
+                '<div class="pop-box">' +
+                    '<div class="title">' + item. title + '</div>' +
+                    '<div class="text">' + item.contents + '</div>' +
+                '</div>' +
+            '</div>' +
+        '</div>';
+        $('.container').append(elements);
+           
+    
+        }); 
+    
+
     // $.getJSON('data/data.json', function(data){
     //     var elements = [];
 
