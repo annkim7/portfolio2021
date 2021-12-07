@@ -27,7 +27,7 @@ $(function(){
                     '</div>' +
                 '</div>';
             
-            $('.container').append(dataHTML);
+            $('.container').append(dataHTML).fadeIn();
         
         }); 
 
@@ -37,7 +37,7 @@ $(function(){
 
     
     $(document).on("click", '.close-btn', function(){
-
+        $(this).parent().fadeOut();
         $(this).parent().remove();
         $('.ball').removeClass('on');
     });
