@@ -39,7 +39,7 @@ $(function(){
         
     });
 
-    close.click(function(){
+    $('.close-btn').click(function(){
         console.log('click!!!');
         $('.popup').fadeOut();
         $(this).parent().remove();
@@ -47,6 +47,10 @@ $(function(){
     });
     
     
-    
+    $(document).on("click", function(){
+        $('.popup').fadeOut();
+        $(this).parent().remove();
+        $('.ball').removeClass('on');
+    });
 
 });
