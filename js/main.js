@@ -27,10 +27,8 @@ $(function(){
                     '</div>' +
                 '</div>';
             
-            //$('.container').append(dataHTML).fadeIn(1000);
-            $('.popup').fadeIn("800", function(){
-                $('.container').append(dataHTML);
-            });
+            $('.container').append(dataHTML).fadeIn(1000);
+           
         });
         $('.ball').addClass('on');
 
