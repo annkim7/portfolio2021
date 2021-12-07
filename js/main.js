@@ -4,8 +4,13 @@ $(function(){
 
     var btn = $('.pop-btn');
     var close = $('.close-btn');
-    // $('.popup').hide();
     
+    close.click(function(){
+       
+        $('.popup').fadeOut();
+        $('.popup').detach();
+        $('.ball').removeClass('on');
+    });
     
     btn.click(function(){
         var list = $(this).parents('li');
