@@ -47,7 +47,7 @@ $(function(){
     });
     
     
-    $(document).on("click", function(){
+    $(document).on("click", '.close-btn', function(){
         $('.popup').fadeOut();
         $(this).parent().remove();
         $('.ball').removeClass('on');
