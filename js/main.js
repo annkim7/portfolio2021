@@ -36,15 +36,15 @@ $(function(){
         $('.popup').fadeIn();
         $('.ball').addClass('on');
 
-        close.click(function(){
-       
-            $('.popup').fadeOut();
-            $('.popup').detach();
-            $('.ball').removeClass('on');
-        });
+        
     });
 
-
+    close.click(function(){
+        console.log('click!!!');
+        $('.popup').fadeOut();
+        $(this).parent().remove();
+        $('.ball').removeClass('on');
+    });
     
     
     
