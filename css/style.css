@@ -77,8 +77,8 @@ body{position: relative;  height:100%; font-family: 'Noto Sans KR', sans-serif;}
 
 .ball{ position: absolute; width:300px;height:300px;border-radius: 100%; background: linear-gradient(60deg, rgba(111,195,247,1) 0%,rgba(79,76,245,1) 100%); transition: all 0.5s linear 0.3s;}
 
-.ball.top{top: -100px; right:-100px;}
-.ball.bottom{bottom: -100px; left:-100px; background: linear-gradient(-60deg,rgba(79,76,245,1) 0%,rgba(111,195,247,1) 100%);}
+.ball.top{top: 20px; right: 60px;}
+.ball.bottom{bottom: 40px; left: 80px; background: linear-gradient(-60deg,rgba(79,76,245,1) 0%,rgba(111,195,247,1) 100%);}
 
 .ball.on{ width:700px;height:700px; transition: all 0.5s linear 0.3s;}
 
