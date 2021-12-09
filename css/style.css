@@ -4,9 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
+    font-family: 'OTWelcomeRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -63,7 +63,7 @@ body{position: relative;  height:100%; font-family: 'Noto Sans KR', sans-serif;}
 
 .title{font-size: 1.2rem;text-transform: uppercase;}
 .pop-btn{width:100%;height:100%;cursor: pointer;}
-.pop-btn:before{display:block; position:absolute; bottom:0; right:0; width:100%; height:30%; background: url('../images/logo_01.png') no-repeat bottom right/cover; content:''; filter: brightness(0) invert(1) blur(2px); }
+.pop-btn:before{display:block; position:absolute; bottom:0; left:40%; width:100%; height:60%; background: url('../images/logo_01.png') no-repeat center center/100% auto; content:''; filter: brightness(0) invert(1) blur(2px); }
 
 .item-1 .pop-btn:before{background-image: url('../images/logo_02.png');}
 .item-2 .pop-btn:before{background-image: url('../images/logo_03.png');}
@@ -71,7 +71,9 @@ body{position: relative;  height:100%; font-family: 'Noto Sans KR', sans-serif;}
 .item-4 .pop-btn:before{background-image: url('../images/logo_05.png');}
 .item-5 .pop-btn:before{background-image: url('../images/logo_06.png');}
 
-.list{margin-top:1.3rem; font-size: 1.05rem;line-height: 1.3;font-weight:400; color:#000; font-family: 'Pretendard-Regular';}
+.content{margin-top:1.3rem; }
+.list{position:relative; padding-top: 0.5rem; padding-left: 0.8rem; font-size: 1.05rem; font-weight:400; color:#444;font-family: 'OTWelcomeRA';}
+.list:before{position: absolute; top: calc(50% - 0.125rem); left:0; content: ''; width: 0.25rem; height: 0.25rem;background:#649BF6; border-radius: 100%;}
 
 .ball{ position: absolute; width:300px;height:300px;border-radius: 100%; background: linear-gradient(60deg, rgba(111,195,247,1) 0%,rgba(79,76,245,1) 100%); transition: all 0.5s linear 0.3s;}
 
