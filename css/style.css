@@ -11,9 +11,11 @@
 }
 
 html{height:100%;}
-body{position: relative;  height:100%; font-family: 'Noto Sans KR', sans-serif;}
+body{position: relative; font-family: 'Noto Sans KR', sans-serif;}
 
-.container{ overflow:hidden;  position: relative;  width:100%; height:100%; background: #F0F0F3;}
+.container{overflow:hidden;  position: relative;  background: #F0F0F3;}
+
+section{  position: relative;  width:100vw; height:100vh;}
 
 .main-visual{display:flex; height:100%; align-items: center;}
 
@@ -22,6 +24,7 @@ body{position: relative;  height:100%; font-family: 'Noto Sans KR', sans-serif;}
     width:1300px;
     height:400px;
     margin:0 auto;
+    z-index: 2;
 }
 
 .slides{
@@ -49,7 +52,6 @@ body{position: relative;  height:100%; font-family: 'Noto Sans KR', sans-serif;}
                 -20px -20px 60px #ffffff;
          color:#606061;font-weight: bold;
 }
-.slides li:hover{}
 
 
 .controls span{position: absolute;
@@ -75,12 +77,70 @@ body{position: relative;  height:100%; font-family: 'Noto Sans KR', sans-serif;}
 .list{position:relative; padding-top: 0.5rem; padding-left: 0.8rem; font-size: 1.05rem; font-weight:400; color:#444;font-family: 'OTWelcomeRA';}
 .list:before{position: absolute; top: calc(50% - 0.125rem); left:0; content: ''; width: 0.25rem; height: 0.25rem;background:#649BF6; border-radius: 100%;}
 
-.ball{ position: absolute; width:300px;height:300px;border-radius: 100%; background: linear-gradient(60deg, rgba(111,195,247,1) 0%,rgba(79,76,245,1) 100%); transition: all 0.5s linear 0.3s;}
+/* .ball{ position: absolute; width:300px;height:300px;border-radius: 100%; background: linear-gradient(60deg, rgba(111,195,247,1) 0%,rgba(79,76,245,1) 100%); transition: all 0.5s linear 0.3s;}
 
 .ball.top{top: 20px; right: 60px;}
 .ball.bottom{bottom: 40px; left: 80px; background: linear-gradient(-60deg,rgba(79,76,245,1) 0%,rgba(111,195,247,1) 100%);}
 
-.ball.on{ width:700px;height:700px; transition: all 0.5s linear 0.3s;}
+.ball.on{ width:700px;height:700px; transition: all 0.5s linear 0.3s;} */
+
+.ball-wrap {position: absolute;  top:0; right:0; bottom:0;  left:0;  width:100%; height:100%;transition: 1.5s; z-index: 2; }
+
+.ball{ overflow: hidden; position: absolute; top: 50%; left: 50%; border-radius: 50%;  }
+
+.ball:nth-of-type(2n){-webkit-animation: float 6s infinite linear; animation: float 16.8s infinite linear;}
+.ball:nth-of-type(2n+1){-webkit-animation: float 3s infinite linear; animation: float 4.8s infinite linear;}
+
+.ball:nth-of-type(1),
+.ball:nth-of-type(2),
+.ball:nth-of-type(3),
+.ball:nth-of-type(4){left: -150%; }
+
+.ball:nth-of-type(5),
+.ball:nth-of-type(6),
+.ball:nth-of-type(7){left: 150%; }
+
+.ball1 {width: 21rem; height: 20.8rem; margin-left: -11rem; box-shadow: 1px 1px 10vh 0 rgba(0, 0, 0, 0.05);}
+.ball2 {width: 16.5rem; height: 16.5rem; margin-top: -28rem;  margin-left: -32rem; box-shadow: -1px 0 10vh 0 rgba(0, 0, 0, 0.05);}
+.ball3 {width: 16.5rem; height: 16.5rem; margin-top: 15rem; margin-left: -42rem; box-shadow: 1px 1px 10vh 0 rgba(0, 0, 0, 0.05); }
+.ball4 {width: 10.3rem; height: 10rem; margin-top: -1rem; margin-left: -58rem; box-shadow: 1px 1px 10vh 0 rgba(0, 0, 0, 0.05);}
+
+.ball5 {width: 14rem; height: 14rem; margin-top: -24rem;  margin-left: 22rem; box-shadow: 1px 1px 10vh 0 rgba(0, 0, 0, 0.05); }
+.ball6 {width: 7rem; height: 7rem;  margin-top: -31rem; margin-left: 3rem; box-shadow: 1px 1px 8vh 0 rgba(0, 0, 0, 0.05); }
+.ball7 {width: 4rem; height: 4rem; margin-top: -18rem; margin-left: 12rem; box-shadow: 1px 1px 6vh 0 rgba(0, 0, 0, 0.05); }
+
+.ball-first-color { position: absolute; left: 0%;  top: 0%;  right: 0%;  bottom: 0%; background-image: radial-gradient(circle farthest-corner at 43% 45%, #0193bf 4%, #10acd6 41%, #2cedf5 97%); }
+
+
+.ball-second-color { position: absolute;  left: 0%;  top: 0%;  right: 0%;  bottom: 0%;  display: block;  border-radius: 50%; background-image: radial-gradient(circle farthest-corner at 20% 20%, rgba(2, 145, 189, 0.74), rgba(43, 237, 245, 0.95)); }
+.ball-third-color { position: absolute;  left: 0%;  top: 0%;  right: 0%;  bottom: 0%;   border-radius: 50%; background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(9, 136, 177, 0.2)), to(hsla(0, 0%, 100%, 0.16))); background-image: linear-gradient(180deg, rgba(9, 136, 177, 0.2), hsla(0, 0%, 100%, 0.16)); box-shadow: inset -1px -9px 8vh 0 #5bf3fa; }
+.ball-third-color.big { display: block;  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(9, 136, 177, 0.2)), to(hsla(0, 0%, 100%, 0.16))); background-image: linear-gradient(180deg, rgba(9, 136, 177, 0.2), hsla(0, 0%, 100%, 0.16)); box-shadow: inset -20px -23px 6vh 0 #5bf3fa;
+}
+.ball-third-color.mid { box-shadow: inset -4px -10px 4vh 0 #5bf3fa; }
+.ball-third-color.small { background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(9, 136, 177, 0.39)), to(hsla(0, 0%, 100%, 0.16))); background-image: linear-gradient(180deg, rgba(9, 136, 177, 0.39), hsla(0, 0%, 100%, 0.16)); box-shadow: inset -1px -26px 5vh -5px #5bf3fa; }
+.ball-third-color.smallest { background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(9, 136, 177, 0.61)), to(hsla(0, 0%, 100%, 0.16))); background-image: linear-gradient(180deg, rgba(9, 136, 177, 0.61), hsla(0, 0%, 100%, 0.16)); box-shadow: inset -1px -11px 5vh 0 #5bf3fa; }
+
+.ball-shine { position: absolute; left: 20%; top: 20%; right: auto;  bottom: auto; width: 50%; height: 50%; border-top: 15px solid #69eebb;
+border-radius: 50%;  opacity: 0.4; -webkit-filter: blur(15px); filter: blur(15px);  -webkit-transform: rotate(-85deg);  -ms-transform: rotate(-85deg); transform: rotate(-85deg); }
+
+.ball1shadow { position: absolute; left: 0%; top: 20%; right: auto; bottom: auto; width: 15%; height: 30%; border-radius: 50%; background-color: rgba(2, 71, 119, 0.8); opacity: 0.68;  -webkit-filter: blur(15px); filter: blur(15px); -webkit-transform: rotate(18deg); -ms-transform: rotate(18deg); transform: rotate(18deg);}
+.ball2shadow { position: absolute; left: 0%;  top: 0%;  right: 0%;  bottom: 0%;  background-image: radial-gradient(circle farthest-corner at 100% 70%, rgba(5, 109, 143, 0.15), rgba(0, 140, 187, 0.01) 33%); }
+.ball4shadow { position: absolute;  left: 60%; top: -25%; right: 0%; bottom: auto; width: 50%; height: 60%; border-radius: 50%; background-color: rgba(2, 71, 119, 0.8); opacity: 0.76; -webkit-filter: blur(20px);  filter: blur(20px);  -webkit-transform: rotate(-45deg);  -ms-transform: rotate(-45deg);    transform: rotate(-45deg); }
+.ball3shadow { position: absolute;  left: -11%;  top: 68%;  right: auto;  bottom: 0%; width: 60%;  height: 50%; border-radius: 50%;  background-color: rgba(2, 71, 119, 0.8); opacity: 0.8;  -webkit-filter: blur(20px); filter: blur(20px); -webkit-transform: rotate(29deg); -ms-transform: rotate(29deg);    transform: rotate(29deg);}
+.ball1shadow2 { position: absolute; left: auto; top: auto; right: 32%; bottom: 1%;  width: 11%;  height: 27%;  border-radius: 50%;  background-color: rgba(2, 71, 119, 0.8);  opacity: 0.83;  -webkit-filter: blur(15px);  filter: blur(15px);  -webkit-transform: rotate(58deg);  -ms-transform: rotate(58deg);    transform: rotate(58deg);}
+.ball7shadow { position: absolute; left: 20%; top: 39%; right: auto; bottom: auto; width: 30%; height: 30%; border-radius: 50%; background-color: rgba(2, 71, 119, 0.8); opacity: 0.42;  -webkit-filter: blur(10px);  filter: blur(10px);  -webkit-transform: rotate(-6deg); -ms-transform: rotate(-6deg);   transform: rotate(-6deg);}
+.ball6shadow { position: absolute;  left: 0%; top: 15%; right: auto;  bottom: auto;  width: 30%;  height: 40%; border-radius: 50%;  background-color: rgba(2, 71, 119, 0.8);  opacity: 0.5;  -webkit-filter: blur(20px);  filter: blur(20px);  -webkit-transform: rotate(20deg);  -ms-transform: rotate(20deg);    transform: rotate(20deg); }
+
+
+@-webkit-keyframes float {
+    from { -webkit-transform: rotate(0deg) translate3d(3px, 0, 0) rotate(0deg); }
+    to { -webkit-transform: rotate(360deg) translate3d(3px, 0, 0) rotate(-360deg); }
+  }
+  
+@keyframes float {
+  from { transform: rotate(0deg) translate3d(3px, 0, 0) rotate(0deg); }
+  to { transform: rotate(360deg) translate3d(3px, 0, 0) rotate(-360deg); }
+}
 
 .popup{position: fixed;top:0;left:0;right:0; bottom:0; width:100%; height:100%; }
 .close-btn{position: absolute; top:0; left:0; width:100%; height:100%;cursor: pointer;background:rgba( 255, 255, 255, 0.3 );}
