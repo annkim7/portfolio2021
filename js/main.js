@@ -30,7 +30,6 @@ $(function(){
             $('.container').append(dataHTML).delay(1000).fadeIn(1000);
            
         });
-        $('.ball').addClass('on');
 
     });
 
@@ -40,7 +39,6 @@ $(function(){
             $(this).remove();
         });
 
-        $('.ball').removeClass('on');
     });
 
 });

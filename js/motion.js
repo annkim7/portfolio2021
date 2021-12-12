@@ -46,8 +46,6 @@ window.onload = function(){
         }
 
         mainSlide.style.setProperty("transform", "translate(-50%, -300%)");
-        
-        
     }
 
     function pageChangeReset(){
@@ -73,6 +71,7 @@ window.onload = function(){
     function pageNumFun(){
         for(var i = 0; i < totalNum; i++){
             section[i].style.zIndex = "-1";
+            section[i].style.setProperty("transition-delay", "1.5s");
         }
 
         var secIdx = pageNum - 1;
