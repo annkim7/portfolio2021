@@ -13,9 +13,9 @@
 html{height:100%;}
 body{position: relative; font-family: 'Noto Sans KR', sans-serif;}
 
-.container{overflow:hidden;  position: relative; width:100vw; height:100vh; background: #F0F0F3;}
+.container{overflow:hidden;  position: relative; width:100vw; height:100vh;}
 
-section{ position: absolute; top:0; left:0; width:100%; height:100%; z-index: 0; }
+section{display:flex; position: absolute; top:0; left:0; width:100%; height:100%; align-items: center; justify-content: center; z-index: 0;  background: #F0F0F3;}
 
 .main-visual{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -300%); z-index:1;}
 .slide_wrapper{ position: relative;  width:1300px;  height:400px;  margin:0 auto;  z-index: 2;}
@@ -112,6 +112,23 @@ border-radius: 50%;  opacity: 0.4; -webkit-filter: blur(15px); filter: blur(15px
 
 .pop-con .title{font-size: 1.6rem; font-weight: 600; color:#fff; letter-spacing: -0.1rem; font-family: 'Oswald', sans-serif;}
 .pop-con .text{margin-top:1.3rem; color:#fff; font-family: 'OTWelcomeRA';}
+
+.section02 .left-side{width: 600px; padding-right: 3rem; }
+.section02 .left-side .title{font-size: 2.3rem;font-weight: 600; color: #4f4cf5; letter-spacing: -0.1rem; }
+.edu-con p{margin: 2rem 0; font-size: 1.05rem; font-weight:400; line-height:1.5; color:#444;font-family: 'OTWelcomeRA';}
+.edu-button{display: flex; align-items: center; justify-content: flex-start;}
+.edu-button a{position: relative;}
+.edu-button a:before{ content: "\f09b"; font-size: 20px; font-family: "Font Awesome 5 Brands";font-weight: 600;color:#4f4cf5;}
+.edu-button a.figma:before{content: "\f799";}
+.edu-button a.notion:before{content: "\f187"; font-family: "Font Awesome 5 Free";}
+.edu-button a ~ a{margin-left:0.6rem;}
+
+.section02 .right-side{width:50%;}
+.edu-box{display:flex; flex-flow: row wrap;}
+.edu-box .edu{width: calc((100% - 1rem)/2); height:200px; margin-top:1rem; margin-left:1rem;  background: rgba(255, 255, 255, 0.3); border-radius: 10px;}
+.edu-box .edu:nth-of-type(2n+1){margin-left:0;}
+
+.edu-box .edu{display: flex; align-items: center; justify-content: center; font-size: 30px; color: #649BF6; font-weight: 600;}
 
 @media (max-width: 700px){
     .container{ width:100%; padding: 0 20px; box-sizing: border-box; }

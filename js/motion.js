@@ -46,6 +46,13 @@ window.onload = function(){
         }
 
         mainSlide.style.setProperty("transform", "translate(-50%, -300%)");
+
+        TweenMax.to( mainSlide, 1.5, {
+            y: -3000,
+            delay : 0.2,
+            ease:Power3.easeInOut 
+        });
+        
     }
 
     function pageChangeReset(){
@@ -55,6 +62,12 @@ window.onload = function(){
         }
 
         mainSlide.style.setProperty("transform", "translate(-50%, -50%)");
+
+        TweenMax.to( mainSlide, 1.5, {
+            y: -220,
+            delay : 0.2,
+            ease:Power3.easeInOut 
+        });
     }
 
     function pageChangeDelay(){
